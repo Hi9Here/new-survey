@@ -7,7 +7,12 @@
 
 <dom-module id="new-survey">
   <template>
-    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+    <style is="custom-style" include="iron-flex iron-flex-alignment">
+      paper-material {
+        width: 200px;
+        height: 250px;
+      }
+    </style>
     <div id="surveycards" div class="layout horizontal layout-start">
       <div id="surveyq">
         <paper-material elevation="1">
