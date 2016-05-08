@@ -69,7 +69,9 @@
     properties: {
       display: {
         computed: "getDisplay(Question, One, Two)"
-      }
+      },
+      One: {type: String, value: "Yes"},
+      Two: {type: String, value: "No"}
     },
     getDisplay: function(Question, One, Two) {
       return [{
