@@ -5,6 +5,11 @@
 <link rel="import" href="../paper-input/paper-textarea.html">
 <link rel="import" href="../polymer/polymer.html">
 
+<!--
+`<new-survey></new-survey>` New Survey
+@demo demo.html
+-->
+
 <dom-module id="new-survey">
   <template>
     <style is="custom-style" include="iron-flex iron-flex-alignment">
@@ -33,9 +38,9 @@
       </div>
     </div>
   </template>
-  <script>
-    (function() {
-      'use strict';
+</dom-module>
+
+<script>
       Polymer({
         is: 'new-survey',
         properties: {
@@ -69,6 +74,5 @@
           this.fire("close")
         }
      })
-   })()
- </script>
-</dom-module>
+</script>
+
