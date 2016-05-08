@@ -9,21 +9,16 @@
 <dom-module id="new-survey">
   <template>
     <style is="custom-style" include="iron-flex iron-flex-alignment">
- 
       #surveycards {
         /*padding: 20px;*/
       }
       #surveyq {
         width: 200px;
-        /* height: 263px; */
         padding-top: 20px;
         padding-right: 20px;
       }
       h1 {
         font-size: 30px;
-      }
-      .buttons {
-       
       }
       paper-button {
         background: var(--accent-color);
@@ -33,12 +28,11 @@
         background: #fff;
         padding: 20px;
       }
-
     </style>
     <div id="surveycards" div class="layout horizontal layout-start">
-<!-- Questions -->
       <div id="surveyq">
         <paper-material elevation="1">
+          <!-- Questions -->
           <paper-textarea label="Question" value="{{Question}}" char-counter maxlength="45" required auto-validate error-message="Needs a Question!"></paper-textarea>
           <center>
             <paper-input label="Option 1" value="{{One}}" char-counter maxlength="10"></paper-input>           
@@ -46,12 +40,10 @@
           </center>
         </paper-material>
         </div>
-<!-- Preview of what you are tryping -->
-        <div id="surveya">
+        <div id="surveya"><!-- Preview of what you are tryping -->
           <card-display style="display:block" cards='{{display}}' viewable></card-display>
         </div>
       </div>
-<!-- Buttons -->
       <div class="buttons">
         <paper-button on-tap="add" raised>OK</paper-button>
         <paper-button on-tap="dontdoit" raised>Cancel</paper-button>
@@ -76,13 +68,11 @@
         url: "custom"
       }]
     },
-    
     add: function() {
       var hash = this.uid + this.Question
       var readableBy = {}
       readableBy[this.uid] = true
         // TODO readableBy other Admins
-
       this.fire("add-survey", {
         Question: this.Question,
         One: this.One,
