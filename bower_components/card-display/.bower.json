@@ -1,0 +1,24 @@
+{
+  "name": "card-display",
+  "description": "displays card",
+  "main": "card-display.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "dependencies": {
+    "polymer": "*",
+    "card-deck": "marcus7777/card-deck#f69c025c29",
+    "paper-material": "PolymerElements/paper-material#~1.0.6"
+  },
+  "homepage": "https://github.com/hi9here/card-display",
+  "_release": "accf76458e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "accf76458e2df3562b1043704fc2269f26a4e738"
+  },
+  "_source": "git://github.com/hi9here/card-display.git",
+  "_target": "master",
+  "_originalSource": "hi9here/card-display"
+}

@@ -39,7 +39,7 @@
 <!-- Questions -->
       <div id="surveyq">
         <paper-material elevation="1">
-          <paper-textarea label="Question" value="{{Question}}" char-counter maxlength="140" required auto-validate error-message="Needs a Question!"></paper-textarea>
+          <paper-textarea label="Question" value="{{Question}}" char-counter maxlength="45" required auto-validate error-message="Needs a Question!"></paper-textarea>
           <center>
             <paper-input label="Option 1" value="{{One}}" char-counter maxlength="10"></paper-input>           
             <paper-input label="Option 2" value="{{Two}}" char-counter maxlength="10"></paper-input>
@@ -72,7 +72,7 @@
     },
     getDisplay: function(Question, One, Two) {
       return [{
-        data: "<center><h3 style='word-wrap: break-word; padding: 10px;'>" + Question + "</h3><paper-button raised>" + One + "</paper-button><paper-button raised>" + Two + "</paper-button></center>",
+        data: "<center><h3 style='word-wrap: break-word; padding: 30px 10px 0 10px; height: 60px;'>" + Question + "</h3><paper-button raised style='margin: 5px; width: 60%;'>" + One + "</paper-button><paper-button raised style='margin: 5px; width: 60%;'>" + Two + "</paper-button></center>",
         url: "custom"
       }]
     },
