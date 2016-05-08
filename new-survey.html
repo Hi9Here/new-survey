@@ -12,13 +12,36 @@
 <dom-module id="new-survey">
   <template>
     <style is="custom-style" include="iron-flex iron-flex-alignment">
+      
       :host {
-        width: 300px;
+        background: none;  
       }
-      paper-material {
+      
+      #surveycards {
+        padding: 20px;
+      }
+      #surveyq {
+        padding: 20px;
         width: 200px;
         height: 250px;
       }
+      #surveya {
+        padding: 20px;
+      }
+      #buttons {
+        padding: 20px;
+      }
+      paper-button {
+        background: var(--accent-color);
+        color: var(--button-background-color);
+      }
+      paper-material {
+        background: #fff;
+        height: 100%;
+        width: 100%;
+      }
+      
+
     </style>
     <div id="surveycards" div class="layout horizontal layout-start">
 <!-- Questions -->
@@ -65,7 +88,7 @@
       readableBy[this.uid] = true
         // TODO readableBy other Admins
 
-      this.fire("addSurvey", {
+      this.fire("add-survey", {
         Question: this.Question,
         Two: this.Two,
         One: this.One,
