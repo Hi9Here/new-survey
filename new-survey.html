@@ -85,9 +85,12 @@
 
       this.fire("add-survey", {
         Question: this.Question,
-        Two: this.Two,
         One: this.One,
-        data: "<center><h3>{{Question}}</h3><{{tag}} raised>{{One}}</{{tag}}><{{tag}} raised>{{Two}}</{{tag}}></center>",
+        Two: this.Two,
+        sharedWidth: 1,
+        ones: 0,
+        twos: 0,
+        data: "<center><h3>{{Question}}</h3><{{tag}} raised>{{One}}</{{tag}}><{{tag}} raised>{{Two}}</{{tag}}></center><div>{{One}}:{{ones}}<br>{{Two}}:{{twos}}</div>",
         tag: "paper-button",
         url: hash,
         readableBy: readableBy
