@@ -7,7 +7,6 @@
 
 <!--
 `<new-survey></new-survey>` New Survey
-@demo demo.html
 -->
 
 <dom-module id="new-survey">
@@ -63,7 +62,7 @@
       readableBy[this.uid] = true
         // TODO readableBy other Admins
 
-      this.fire("add", {
+      this.fire("addSurvey", {
         Question: this.Question,
         Two: this.Two,
         One: this.One,
