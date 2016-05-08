@@ -1,0 +1,21 @@
+{
+  "name": "new-survey",
+  "version": "1.0.0",
+  "description": "New Survey Cards",
+  "main": "new-survey.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "dependencies": {
+    "paper-button": "PolymerElements/paper-button#master",
+    "paper-input": "PolymerElements/paper-input#master",
+    "paper-material": "PolymerElements/paper-material#master",
+    "polymer": "Polymer/polymer#master",
+    "card-display": "hi9here/card-display#master"
+  },
+  "resolutions": {
+    "polymer": "master",
+    "paper-material": "master"
+  }
+}
