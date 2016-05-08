@@ -13,6 +13,9 @@
 <dom-module id="new-survey">
   <template>
     <style is="custom-style" include="iron-flex iron-flex-alignment">
+      :host {
+        width: 300px;
+      }
       paper-material {
         width: 200px;
         height: 250px;
@@ -58,7 +61,7 @@
       }]
     },
     add: function() {
-      var hash = this.hash(this.uid + this.Question)
+      var hash = this.uid + this.Question
       var readableBy = {}
       readableBy[this.uid] = true
         // TODO readableBy other Admins
@@ -67,7 +70,7 @@
         Question: this.Question,
         Two: this.Two,
         One: this.One,
-        data: "<center><h1>{{Question}}</h1><{{tag}} raised>{{One}}</{{tag}}><{{tag}} raised>{{Two}}</{{tag}}></center>",
+        data: "<center><h3>{{Question}}</h3><{{tag}} raised>{{One}}</{{tag}}><{{tag}} raised>{{Two}}</{{tag}}></center>",
         tag: "paper-button",
         url: hash,
         readableBy: readableBy
