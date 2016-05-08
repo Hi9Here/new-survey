@@ -22,7 +22,8 @@
         padding-top: 20px;
         padding-right: 20px;
       }
-      #surveya {
+      h1 {
+        font-size: 30px;
       }
       .buttons {
        
@@ -35,7 +36,6 @@
         background: #fff;
         padding: 20px;
       }
-      
 
     </style>
     <div id="surveycards" div class="layout horizontal layout-start">
@@ -73,7 +73,7 @@
     },
     getDisplay: function(Question, One, Two) {
       return [{
-        data: "<center><h1>" + Question + "</h1><paper-button raised>" + One + "</paper-button><paper-button raised>" + Two + "</paper-button></center>",
+        data: "<center><h3 style='word-wrap: break-word; padding: 10px;'>" + Question + "</h3><paper-button raised>" + One + "</paper-button><paper-button raised>" + Two + "</paper-button></center>",
         url: "custom"
       }]
     },
