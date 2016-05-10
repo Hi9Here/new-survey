@@ -12,6 +12,7 @@
 
       #surveyq {
         margin-right: 30px;
+        width: 200px;
       }
       h1 {
         font-size: 30px;
@@ -61,7 +62,7 @@
     },
     getDisplay: function(Question, One, Two) {
       return [{
-        data: "<center><h3 style='word-wrap: break-word; padding: 30px 10px 0 10px;'>" + Question + "</h3><paper-button raised style='margin: 5px; width: 60%;'>" + One + "</paper-button><paper-button raised style='margin: 5px; width: 60%;'>" + Two + "</paper-button></center>",
+        data: "<center><h3 style='word-wrap: break-word; padding: 10px 10px 0 10px;'>" + Question + "</h3><paper-button raised style='margin: 5px; width: 60%;'>" + One + "</paper-button><paper-button raised style='margin: 5px; width: 60%;'>" + Two + "</paper-button></center>",
         url: "custom"
       }]
     },
@@ -74,8 +75,8 @@
         sharedWith: 0,
         ones: 0,
         twos: 0,
-        data: "<center><h3 style='word-wrap:break-word;padding: 30px 10px 0;'>{{Question}}</h3><{{tag}} raised>{{One}}</{{tag}}><{{tag}} raised>{{Two}}</{{tag}}></center>",
-        face: "<center><p style='word-wrap:break-word;padding: 30px 10px 0;'>{{Question}}</p><p>{{One}}: {{ones}}<br />{{Two}}: {{twos}}</p>", // TODO  <br /> shared with: {{sharedWith}}
+        data: "<center><h3 style='word-wrap:break-word;padding: 10px 10px 0;'>{{Question}}</h3><{{tag}} raised>{{One}}</{{tag}}><{{tag}} raised>{{Two}}</{{tag}}></center>",
+        face: "<center><p style='word-wrap:break-word;padding: 10px 10px 0;'>{{Question}}</p><p>{{One}}: {{ones}}<br />{{Two}}: {{twos}}</p>", // TODO  <br /> shared with: {{sharedWith}}
         tag: "paper-button"
       })
 
