@@ -9,38 +9,35 @@
 <dom-module id="new-survey">
   <template>
     <style is="custom-style" include="iron-flex iron-flex-alignment">
-      #surveycards {
-        /*padding: 20px;*/
-      }
+
       #surveyq {
-        width: 200px;
-        padding-top: 20px;
-        padding-right: 20px;
+        margin-right: 30px;
       }
       h1 {
         font-size: 30px;
       }
       paper-button {
         background: var(--accent-color);
-        color: var(--button-background-color);
+        color: var(--button-color);
       }
       paper-material {
         background: #fff;
-        padding: 20px;
+        padding: 18px;
       }
     </style>
     <div id="surveycards" div class="layout horizontal layout-start">
       <div id="surveyq">
         <paper-material elevation="1">
           <!-- Questions -->
-          <paper-textarea label="Question" value="{{Question}}" char-counter maxlength="45" required auto-validate error-message="Needs a Question!"></paper-textarea>
+          <paper-textarea label="Question" value="{{Question}}" char-counter maxlength="45" required auto-validate></paper-textarea>
           <center>
             <paper-input label="Option 1" value="{{One}}" char-counter maxlength="10"></paper-input>           
             <paper-input label="Option 2" value="{{Two}}" char-counter maxlength="10"></paper-input>
           </center>
         </paper-material>
         </div>
-        <div id="surveya"><!-- Preview of what you are tryping -->
+        <!-- Preview of what you are tryping -->
+        <div id="surveya">
           <card-display style="display:block" cards='{{display}}' viewable></card-display>
         </div>
       </div>
@@ -64,7 +61,7 @@
     },
     getDisplay: function(Question, One, Two) {
       return [{
-        data: "<center><h3 style='word-wrap: break-word; padding: 30px 10px 0 10px; height: 60px;'>" + Question + "</h3><paper-button raised style='margin: 5px; width: 60%;'>" + One + "</paper-button><paper-button raised style='margin: 5px; width: 60%;'>" + Two + "</paper-button></center>",
+        data: "<center><h3 style='word-wrap: break-word; padding: 30px 10px 0 10px;'>" + Question + "</h3><paper-button raised style='margin: 5px; width: 60%;'>" + One + "</paper-button><paper-button raised style='margin: 5px; width: 60%;'>" + Two + "</paper-button></center>",
         url: "custom"
       }]
     },
@@ -77,8 +74,8 @@
         sharedWith: 0,
         ones: 0,
         twos: 0,
-        data: "<center><h3 style='word-wrap:break-word;padding: 30px 10px 0;height:60px'>{{Question}}</h3><{{tag}} raised>{{One}}</{{tag}}><{{tag}} raised>{{Two}}</{{tag}}></center>",
-        face: "<center><p style='word-wrap:break-word;padding: 30px 10px 0;height:60px'>{{Question}}</p><p>{{One}}: {{ones}}<br />{{Two}}: {{twos}}</p>", // TODO  <br /> shared with: {{sharedWith}}
+        data: "<center><h3 style='word-wrap:break-word;padding: 30px 10px 0;'>{{Question}}</h3><{{tag}} raised>{{One}}</{{tag}}><{{tag}} raised>{{Two}}</{{tag}}></center>",
+        face: "<center><p style='word-wrap:break-word;padding: 30px 10px 0;'>{{Question}}</p><p>{{One}}: {{ones}}<br />{{Two}}: {{twos}}</p>", // TODO  <br /> shared with: {{sharedWith}}
         tag: "paper-button"
       })
 
