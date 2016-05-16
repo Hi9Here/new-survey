@@ -20,18 +20,15 @@
         background: #fff;padding: 18px;width: 260px
       }
     </style>
-    <div id="surveycards" div class="layout horizontal layout-start">
-        <paper-material elevation="4" style="display:inline-block">
-          <paper-textarea label="Question" value="{{Question}}" char-counter maxlength="45" required auto-validate></paper-textarea>
-          <center>
-            <paper-input label="Option 1" value="{{One}}" char-counter maxlength="10"></paper-input>           
-            <paper-input label="Option 2" value="{{Two}}" char-counter maxlength="10"></paper-input>
-          </center>
-        </paper-material>
+      <paper-material elevation="4" style="display:inline-block">
+        <paper-textarea label="Question" value="{{Question}}" char-counter maxlength="45" required auto-validate></paper-textarea>
+        <center>
+          <paper-input label="Option 1" value="{{One}}" char-counter maxlength="10"></paper-input>           
+          <paper-input label="Option 2" value="{{Two}}" char-counter maxlength="10"></paper-input>
+        </center>
+      </paper-material>
         <!-- Preview of what you are tryping -->
-        <card-display style="display:inline-block" cards="{{display}}" viewable></card-display>
-        
-      </div>
+      <card-display style="margin-right: 20px;display:inline-block" cards="{{display}}" viewable></card-display>
       <div class="buttons">
         <paper-button on-tap="add" raised>OK</paper-button>
         <paper-button on-tap="dontdoit" raised>Cancel</paper-button>
