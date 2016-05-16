@@ -9,11 +9,6 @@
 <dom-module id="new-survey">
   <template>
     <style is="custom-style" include="iron-flex iron-flex-alignment">
-
-      #surveyq {
-        margin-right: 30px;
-        width: 200px;
-      }
       h1 {
         font-size: 30px;
       }
@@ -26,19 +21,16 @@
       }
     </style>
     <div id="surveycards" div class="layout horizontal layout-start">
-      <div id="surveyq">
-        <paper-material elevation="1">
+        <paper-material elevation="4" style="display:inline-block">
           <paper-textarea label="Question" value="{{Question}}" char-counter maxlength="45" required auto-validate></paper-textarea>
           <center>
             <paper-input label="Option 1" value="{{One}}" char-counter maxlength="10"></paper-input>           
             <paper-input label="Option 2" value="{{Two}}" char-counter maxlength="10"></paper-input>
           </center>
         </paper-material>
-        </div>
         <!-- Preview of what you are tryping -->
-        <div id="surveya">
-          <card-display style="display:block" cards='{{display}}' viewable></card-display>
-        </div>
+        <card-display style="display:inline-block" cards="{{display}}" viewable></card-display>
+        
       </div>
       <div class="buttons">
         <paper-button on-tap="add" raised>OK</paper-button>
