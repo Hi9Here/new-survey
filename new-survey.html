@@ -40,17 +40,7 @@
   Polymer({
     is: 'new-survey',
     properties: {
-      display: {
-        computed: "getDisplay(Question, One, Two)"
-      },
-      One: {type: String, value: "Yes"},
-      Two: {type: String, value: "No"}
-    },
-    getDisplay: function(Question, One, Two) {
-      return [{
-        data: "<center><h3 style='word-wrap: break-word; padding: 10px 10px 0 10px;'>" + Question + "</h3><paper-button raised style='margin: 5px; width: 60%;'>" + One + "</paper-button><paper-button raised style='margin: 5px; width: 60%;'>" + Two + "</paper-button></center>",
-        url: "custom"
-      }]
+      One: {type: String, value: "Yes"}, Two: {type: String, value: "No"}
     },
     add: function() {
         // TODO readableBy other Admins
@@ -61,7 +51,7 @@
         sharedWith: 0,
         ones: 0,
         twos: 0,
-        data: "<center><h3 style='word-wrap:break-word;padding: 10px 10px 0;'>{{Question}}</h3><{{tag}} raised>{{One}}</{{tag}}><{{tag}} raised>{{Two}}</{{tag}}></center>",
+        _data: "<center><h3 style='word-wrap:break-word;padding: 10px 10px 0;'>{{Question}}</h3><{{tag}} raised>{{One}}</{{tag}}><{{tag}} raised>{{Two}}</{{tag}}></center>",
         face: "<center><p style='word-wrap:break-word;padding: 10px 10px 0;'>{{Question}}</p><p>{{One}}: {{ones}}<br />{{Two}}: {{twos}}</p>", // TODO  <br /> shared with: {{sharedWith}}
         tag: "paper-button"
       })
